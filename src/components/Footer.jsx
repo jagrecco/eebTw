@@ -1,11 +1,11 @@
 import { NavBar } from "./header/NavBar"
 
-const Footer = () => {
+export const Footer = () => {
   return (
-    <div className="">
+    <div className="bg-lime-400">
       <NavBar/>
     </div>
   )
 }
 
-export default Footer
+
