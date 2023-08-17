@@ -26,11 +26,11 @@ export const Main = () => {
   return (
     <main className="mx-6 text-left">
       
-      <section className="border-4 border-red-400">
-        <h1 className="text-xl">Inscripción 2024</h1>
+      <section className="">
+        <h1 className="text-xl text-sky-600 font-extrabold">Inscripción 2024</h1>
 
-        <p>Se encuentra abierta la Inscripción para el ciclo escolar 2024. Para recibir iformación al respecto por favor complete el formulario
-        </p>
+        <p>Se encuentra abierta la Inscripción para el ciclo escolar 2024. Para recibir iformación al respecto por favor complete el formulario</p>
+        <button className="bg-sky-600 font-bold text-neutral-100 p-2">Información</button>
 
         <Inscripcion/>
         <Niveles/>

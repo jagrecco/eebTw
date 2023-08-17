@@ -8,12 +8,16 @@ import whatsapp from '../assets/whatsapp-color-icon.svg'
 
 export const Redes = () => {
   return (
-    <div className='flex flex-row'>
-        <img className="w-10" src={phone} alt="" />
+    <div className='flex flex-col'>
+        <img className="w-10" src={phone} alt="44411306" />
+        <p>44411306</p>
         <img className="w-10" src={email} alt="" />
+        <p>info@eeb.edu.ar</p>
         <img className="w-10" src={facebook} alt="" />
+        <p>44411306</p>
         <a href="http://www.instagram.com"><img className="w-10" src={instagram} alt="" /></a>
         <img className="w-10" src={whatsapp} alt="" />
+        <p>44411306</p>
     </div>
   )
 }
