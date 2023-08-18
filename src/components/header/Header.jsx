@@ -1,4 +1,5 @@
 import logo from "../../assets/logo.png"
+import hamb from "../../assets/hamb.svg"
 import {NavBar} from './NavBar'
 
 export const Header = () => {
@@ -8,7 +9,11 @@ export const Header = () => {
           <picture>
             <img src={logo} alt="" />
           </picture>
+          <picture>
+            <img src={hamb} alt="" />
+          </picture>
         </div>
+
         <NavBar/>
         
     </header>
