@@ -7,12 +7,12 @@ export const NavBar = () => {
 
   const handleClick=()=>{
     setClicked(prevState=>!prevState)
-    console.log(clicked)
+
   }
   
   return (
     <nav className="">
-      <ul className="bg-sky-100 w-[329px] h-[185px] top-[120px] absolute left-0 right-0 mx-auto  flex-col items-center place-content-around after:content-[''] after:absolute after:top-[-24px] after:right-[0px] after:border-[12px] after:border-sky-100 after:border-t-transparent after:border-l-transparent  hidden">
+      <ul className={`bg-sky-100 w-[329px] h-[185px] top-[120px] absolute left-0 right-0 mx-auto  flex-col items-center place-content-around after:content-[''] after:absolute after:top-[-24px] after:right-[0px] after:border-[12px] after:border-sky-100 after:border-t-transparent after:border-l-transparent ${clicked ? 'flex' : 'hidden'}`}>
         <li className="list-none font-light hover:cursor-pointer hover:font-bold hover:text-sky-700">
           Primer
         </li>
