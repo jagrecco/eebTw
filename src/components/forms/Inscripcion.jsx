@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Inscripcion = () => {
 
+  const inputReference = useRef(null);
+
   const [formState, setFormState]=useState(false);
+
+  useEffect(() => {
+    inputReference.current.focus();
+}, [formState]);
 
   const handelForm=()=>{
     setFormState(prevState=>!prevState);
   }
 
-
+  
   return (
     <section className="mt-6">
       <h1 className="text-xl text-sky-600 font-extrabold text-center">Inscripción 2024</h1>
@@ -16,9 +22,9 @@ export const Inscripcion = () => {
       <button className="mt-4 bg-sky-600 font-bold text-neutral-100 p-2" onClick={handelForm}>
         {formState ? 'Cierre el formulario de información' : 'Acceda al formulario de información' }
       </button>
-      <form
+      <form onBlur={handelForm} 
         id="InfoForm"
-        className={`border-sky-200 px-2 py-4 shadow-2xl  flex-col border-2 mt-2 ${formState ? 'flex' : 'hidden'}`}
+        className={`border-sky-200 px-2 py-4 shadow-2xl  flex-col border-2 mt-2 ${formState ? 'flex transition ease-in-out delay-150' : 'hidden'}`}
       >
         <h2 className="text-center font-bold text-sky-600">
           Solicitud de Información
@@ -30,6 +36,7 @@ export const Inscripcion = () => {
           placeholder="Ingrese su nombre"
           className="bg-sky-100 font-thin px-1"
           type="text"
+          ref={inputReference}
         />
         <label className="text-sky-600" htmlFor="">
           Apellido
